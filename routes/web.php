@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Pos\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -25,3 +26,9 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
 });
 
+
+Route::controller(CategoryController::class)->group(function(){
+    Route::get('/all/category', 'AllCategory')->name('all.category');
+    Route::get('/add/category', 'AddCategory')->name('add.category');
+    Route::post('/store/category', 'StoreCategory')->name('store.category');
+});
