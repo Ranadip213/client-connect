@@ -5,14 +5,25 @@
           <div class="nav">
             <div class="sb-sidenav-menu-heading">Core</div>
             <a class="nav-link" href="index.html">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+              <div class="sb-nav-link-icon"><i class="fa-solid fa-chart-bar"></i></div>
               Dashboard
             </a>
 
             <a class="nav-link" href="{{ route('all.category') }}">
-              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+              <div class="sb-nav-link-icon"><i class="fa-solid fa-layer-group"></i></div>
               Category
             </a>
+
+            <a class="nav-link" href="{{ route('all.customer') }}">
+              <div class="sb-nav-link-icon"><i class="fa-solid fa-headset"></i></div>
+              Customers
+            </a>
+
+            <a class="nav-link" href="{{ route('all.order') }}">
+              <div class="sb-nav-link-icon"><i class="fa-solid fa-first-order-alt"></i></div>
+              Orders
+            </a>
+
 
 
             <div class="sb-sidenav-menu-heading">Interface</div>

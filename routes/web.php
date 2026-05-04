@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Pos\CategoryController;
+use App\Http\Controllers\Pos\OrderController;
+use App\Http\Controllers\Pos\CustomerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -31,4 +33,16 @@ Route::controller(CategoryController::class)->group(function(){
     Route::get('/all/category', 'AllCategory')->name('all.category');
     Route::get('/add/category', 'AddCategory')->name('add.category');
     Route::post('/store/category', 'StoreCategory')->name('store.category');
+    Route::get('/category/edit/{id}', 'EditCategory')->name('edit.category');
+    Route::patch('/update/category/{id}', 'UpdateCategory')->name('update.category');
+    Route::get('/delete/category/{id}', 'DeleteCategory')->name('delete.category');
+});
+
+
+Route::controller(CustomerController::class)->group(function(){
+    Route::get('/all/customer', 'AllCustomer')->name('all.customer');
+});
+
+Route::controller(OrderController::class)->group(function(){
+    Route::get('/all/order', 'AllOrder')->name('all.order');
 });
